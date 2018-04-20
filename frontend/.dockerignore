@@ -1,0 +1,14 @@
+Dockerfile*
+docker-compose*
+.dockerignore
+.git
+.gitignore
+.gitattributes
+README.md
+LICENSE
+.vscode
+.vs
+
+node_modules
+npm-debug.log
+dist

@@ -1,4 +1,4 @@
-FROM teracy/angular-cli AS build
+FROM johnpapa/angular-cli AS build
 WORKDIR /src/Chat
 COPY package.json .
 RUN npm i
