@@ -3,16 +3,18 @@ services:
   chat-backend:
     build:
       context: ./backend
+    links:
+      - chat-redis
     ports:
       - 5001:80
     environment:
       - REDIS_CONNECTIONSTRING=192.168.14.39:6379
-    depends_on:
-      - chat-redis
-
+  
   chat-frontend:
     build:
       context: ./frontend
+    links:
+      - chat-backend
     ports:
       - 4001:80
 
