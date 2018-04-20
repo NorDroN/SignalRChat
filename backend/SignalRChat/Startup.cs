@@ -26,7 +26,8 @@ namespace SignalRChat
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSignalR();
+            var redisConnectionString = Environment.GetEnvironmentVariable("REDIS_CONNECTIONSTRING");
+            services.AddSignalR().AddRedis(redisConnectionString);
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

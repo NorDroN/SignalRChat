@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.0-preview2-final" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Redis" Version="1.0.0-preview2-final" />
   </ItemGroup>
 
 </Project>

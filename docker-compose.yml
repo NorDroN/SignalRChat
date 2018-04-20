@@ -1,0 +1,15 @@
+version: '3'
+services:
+  chat-backend:
+    build:
+      context: ./backend
+    ports:
+      - 5001:80
+    environment:
+      - REDIS_CONNECTIONSTRING=192.168.14.39:6379
+    depends_on:
+      - chat-redis
+  chat-redis:
+    image: redis
+    ports:
+      - 6379:6379
