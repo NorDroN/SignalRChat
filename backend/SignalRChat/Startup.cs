@@ -37,7 +37,7 @@ namespace SignalRChat
         {
             app.UseSignalR(routes =>
             {
-                routes.MapHub<ChatHub>("/chat");
+                routes.MapHub<ChatHub>("/signalr");
             });
 
             if (env.IsDevelopment())

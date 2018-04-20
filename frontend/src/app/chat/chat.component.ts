@@ -24,8 +24,8 @@ export class ChatComponent {
   }
 
   ngOnInit() {
-	// , { transport: TransportType.LongPolling }
-    this._hubConnection = new HubConnection('/chat');
+    // { transport: TransportType.LongPolling }
+    this._hubConnection = new HubConnection('/signalr');
 
     this._hubConnection.on('Send', (data: any) => {
       const received = `Received: ${data}`;
